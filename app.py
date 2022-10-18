@@ -8,8 +8,8 @@ from helpers.second_api import get_worst_food
 
 app = Flask(__name__)
 
-WEEK2_FIRST_API = "localhost:5000/"
-WEEK2_SECOND_API = "localhost:5001/"
+WEEK2_FIRST_API = "https://cyf-first-api-rspelx6baq-vp.a.run.app/"
+WEEK2_SECOND_API = "https://cyf-second-api-rspelx6baq-vp.a.run.app/"
 
 @app.route("/")
 def homepage():
@@ -18,8 +18,8 @@ def homepage():
     lucky = get_lucky_number(WEEK2_FIRST_API, "luckynumber")
     worst = get_worst_food(WEEK2_FIRST_API,"worstfoodfrom1", "Something went wrong, fix and try again.")
     worstsource = get_worst_food(WEEK2_SECOND_API,"worstfoodfrom2", "Unavailable, Great Job!")
-
-    return render_template("homepage.html", number=random_number, time=current_epoch, lucky=lucky, worst=worst, worstsource=worstsource )
+    YOUR_NAME = "Alireza"
+    return render_template("homepage.html", number=random_number, time=current_epoch, lucky=lucky, worst=worst, worstsource=worstsource, YOUR_NAME=YOUR_NAME)
 
 
 @app.route("/number-fact")
