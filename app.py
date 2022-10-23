@@ -8,8 +8,8 @@ from helpers.second_api import get_worst_food
 
 app = Flask(__name__)
 
-WEEK2_FIRST_API = "http://34.125.253.201/"
-WEEK2_SECOND_API = "http://34.125.160.19/"
+WEEK2_FIRST_API = "http://10.182.0.4/"
+WEEK2_SECOND_API = "http://10.182.0.5/"
 
 
 @app.route("/")
